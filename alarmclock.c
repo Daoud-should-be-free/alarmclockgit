@@ -70,7 +70,6 @@ struct timespec timetowait(struct tm hour){
 	}
 	hours2seconds*=3600;
 	long long int minutes2seconds=(hour.tm_min-moment->tm_min);
-	printf("minu:\t%lld\n",minutes2seconds);
 
 	minutes2seconds*=60;
 	long long int totalsecs=hours2seconds+minutes2seconds;
