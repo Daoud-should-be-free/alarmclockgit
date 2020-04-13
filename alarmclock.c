@@ -41,6 +41,7 @@ int main(int argc, char const *argv[]){
 			strcat(message,snippet);
 			strcat(message," ");
 		}else{
+			printf("Wrong args\n");
 			return(0);
 		}
 	}
@@ -63,7 +64,6 @@ struct timespec timetowait(struct tm hour){
 	time_t(now);
 	time(&now);
 	moment=localtime(&now);
-	printf("%d:%d\n",moment->tm_hour,moment->tm_min);
 	long long int hours2seconds=(hour.tm_hour-moment->tm_hour);
 	if (hours2seconds<0){
 		hours2seconds+=24;
