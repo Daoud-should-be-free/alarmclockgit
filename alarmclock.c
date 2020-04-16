@@ -51,7 +51,9 @@ int main(int argc, char const *argv[]){
 	struct sigevent event={.sigev_signo=SIGRTMIN,.sigev_notify=SIGEV_SIGNAL};
 	timer_create(CLOCK_REALTIME,&event,&temp);
 	struct itimerspec set_alarm={.it_value=wait,.it_interval=0};
+	
 	timer_settime(temp,0,&set_alarm,NULL);
+	
 	int null=0;
 	sigwait(&set,&null);
 	alarmsound(message);
