@@ -103,7 +103,7 @@ void alarmsound(char cad[1000]){
 		printf("\a");
 		fflush(stdout);
 	}
-	printf("%s\n\n",cad);
+	printf("%s",cad);
 	return;
 }
 void help(){
